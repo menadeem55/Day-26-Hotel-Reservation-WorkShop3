@@ -9,6 +9,10 @@ public class HotelReservationMain {
 		hotelReservation.addHotelDetails("Ridgewood", 220, 110, 150, 40);
 
 		hotelReservation.getHotelDetails();
+		System.out.println("  ");
+		System.out.println("Cheapest Hotel: ");
+		hotelReservation.viewHotels();
+		hotelReservation.getCheapestHotel();
 	}
 
 }

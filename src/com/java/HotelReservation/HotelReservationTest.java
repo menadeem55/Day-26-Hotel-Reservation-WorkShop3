@@ -16,4 +16,10 @@ public class HotelReservationTest {
 		boolean ridgewoodHotel = hotelReservation.checkHotelDetails(new Hotel("RidgeWoods", 220, 110, 150, 40));
 		Assert.assertTrue(ridgewoodHotel);
 	}
+	
+	@Test
+	public void toFindTheCheapestHotel() {
+		HotelReservation hotelReservation = new HotelReservation();
+		hotelReservation.getCheapestHotel();
+	}
 }

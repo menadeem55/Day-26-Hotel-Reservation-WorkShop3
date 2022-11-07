@@ -22,16 +22,16 @@ public class Hotel {
 	public void setHotelName(String hotelName) {
 		this.hotelName = hotelName;
 	}
-	public int getWeekdayRateForRegular() {
+	public int getWeekdayRateForRegularCustomer() {
 		return weekdayRateForRegular;
 	}
-	public void setWeekdayRateForRegular(int weekdayRateForRegular) {
+	public void setWeekdayRateForRegularCustomer(int weekdayRateForRegular) {
 		this.weekdayRateForRegular = weekdayRateForRegular;
 	}
-	public int getWeekendRateForRegular() {
+	public int getWeekendRateForRegularCustomer() {
 		return weekendRateForRegular;
 	}
-	public void setWeekendRateForRegular(int weekendRateForRegular) {
+	public void setWeekendRateForRegularCustomer(int weekendRateForRegular) {
 		this.weekendRateForRegular = weekendRateForRegular;
 	}
 	public int getWeekdayRateForRewarder() {
@@ -49,14 +49,13 @@ public class Hotel {
 	
 	@Override
 	public String toString() {
-		return "Hotel [hotelName=" + hotelName + ", weekdayRateForRegular=" + weekdayRateForRegular
-				+ ", weekendRateForRegular=" + weekendRateForRegular + ", weekdayRateForRewarder="
-				+ weekdayRateForRewarder + ", weekendRateForRewarder=" + weekendRateForRewarder + ", getHotelName()="
-				+ getHotelName() + ", getWeekdayRateForRegular()=" + getWeekdayRateForRegular()
-				+ ", getWeekendRateForRegular()=" + getWeekendRateForRegular() + ", getWeekdayRateForRewarder()="
-				+ getWeekdayRateForRewarder() + ", getWeekendRateForRewarder()=" + getWeekendRateForRewarder()
-				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
-				+ "]";
+        return "\n" + "Hotel{" +
+                "HotelName='" + hotelName + '\'' +
+                ", WeekdayRateForRegular=" + weekdayRateForRegular + '\'' +
+                ",WeekendRateForRewarder+" + weekendRateForRegular +
+                ", WeekdayRateForRegular=" + weekdayRateForRewarder + '\'' +
+                ",WeekendRateForRewarder+" + weekendRateForRewarder +
+                '}';
 	}
 	
 	
