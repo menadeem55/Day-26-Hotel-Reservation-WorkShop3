@@ -50,13 +50,13 @@ public class HotelReservation {
 			totalLakeWoodCost = (totalLakeWoodCost + weekdayRate + weekendRate);
 		}
 		if (Objects.equals(hotel, "BridgeWood")) {
-			int weekday_rate = 150;
+			int weekday_rate = 110;
 			int weekend_rate = 50;
 			totalBridgeWoodCost = (totalBridgeWoodCost + weekday_rate + weekend_rate);
 		}
 		if (Objects.equals(hotel, "RidgeWood")) {
-			int weekday_rate = 220;
-			int weekend_rate = 150;
+			int weekday_rate = 110;
+			int weekend_rate = 40;
 			totalRidgeWoodCost = (totalRidgeWoodCost + weekday_rate + weekend_rate);
 		}
 		if ((totalBridgeWoodCost <= totalLakeWoodCost && totalBridgeWoodCost < totalRidgeWoodCost)
