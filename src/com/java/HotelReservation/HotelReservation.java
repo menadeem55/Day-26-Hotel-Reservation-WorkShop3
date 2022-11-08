@@ -12,7 +12,7 @@ public class HotelReservation {
 			int weekdayRateForRewarder, int weekendRateForRewarder, int hotelRatings) {
 
 		Hotel hotel = new Hotel(hotelName, weekdayRateForRegular, weekendRateForRegular, weekdayRateForRewarder,
-								weekendRateForRewarder, hotelRatings);
+				weekendRateForRewarder, hotelRatings);
 		hotelDetails.add(hotel);
 
 	}
@@ -40,8 +40,39 @@ public class HotelReservation {
 
 	}
 
+	public void getCheapestHotelForGivenDate() {
+		String hotel = null;
+		int totalLakeWoodCost = 0, totalBridgeWoodCost = 0, totalRidgeWoodCost = 0;
+		int LakeWood_Rate = 3, BridgeWood_Rate = 4, RidgeWood_Rate = 5;
+		if (Objects.equals(hotel, "LakeWood")) {
+			int weekday_rate = 110;
+			int weekend_rate = 90;
+			totalLakeWoodCost = (totalLakeWoodCost + weekday_rate + weekend_rate);
+
+		}
+		if (Objects.equals(hotel, "BridgeWood")) {
+			int weekday_rate = 150;
+			int weekend_rate = 50;
+			totalBridgeWoodCost = (totalBridgeWoodCost + weekday_rate + weekend_rate);
+		}
+		if (Objects.equals(hotel, "RidgeWood")) {
+			int weekday_rate = 220;
+			int weekend_rate = 150;
+			totalRidgeWoodCost = (totalRidgeWoodCost + weekday_rate + weekend_rate);
+
+		}
+		if ((totalBridgeWoodCost <= totalLakeWoodCost && totalBridgeWoodCost < totalBridgeWoodCost)
+				&& (totalLakeWoodCost < totalBridgeWoodCost && totalBridgeWoodCost < totalBridgeWoodCost)) {
+			System.out.println("BridgeWood");
+			System.out.println("Rating:" + BridgeWood_Rate);
+			System.out.println("Total Rates: $" + totalBridgeWoodCost);
+
+		}
+
+	}
+
 	public void viewHotels() {
-		getHotelDetails();
+		getCheapestHotelForGivenDate();
 	}
 
 }

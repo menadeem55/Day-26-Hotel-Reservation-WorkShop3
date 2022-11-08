@@ -17,6 +17,7 @@ public class HotelReservationTest {
 		Assert.assertTrue(ridgewoodHotel);
 	}
 	
+	
 	@Test
 	public void toFindTheCheapestHotels() {
 		HotelReservation hotelReservation = new HotelReservation();
