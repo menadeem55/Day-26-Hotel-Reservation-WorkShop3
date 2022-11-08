@@ -9,23 +9,18 @@ public class HotelReservationTest {
 	public void givenHotelNameShouldBePassed() {
 		HotelReservation hotelReservation = new HotelReservation();
 
-		boolean lakewoodHotel = hotelReservation.checkHotelDetails(new Hotel("LakeWoods", 110, 80, 90, 80));
+		boolean lakewoodHotel = hotelReservation.checkHotelDetails(new Hotel("LakeWoods", 110, 80, 90, 80, 3));
 		Assert.assertTrue(lakewoodHotel);
-		boolean bridgewoodHotel = hotelReservation.checkHotelDetails(new Hotel("Bridgewood", 160, 110, 60, 50));
+		boolean bridgewoodHotel = hotelReservation.checkHotelDetails(new Hotel("Bridgewood", 160, 110, 60, 50, 4));
 		Assert.assertTrue(lakewoodHotel);
-		boolean ridgewoodHotel = hotelReservation.checkHotelDetails(new Hotel("RidgeWoods", 220, 110, 150, 40));
+		boolean ridgewoodHotel = hotelReservation.checkHotelDetails(new Hotel("RidgeWoods", 220, 110, 150, 40, 5));
 		Assert.assertTrue(ridgewoodHotel);
 	}
 	
 	@Test
-	public void toFindTheCheapestHotel() {
+	public void toFindTheCheapestHotels() {
 		HotelReservation hotelReservation = new HotelReservation();
 		hotelReservation.getCheapestHotel();
 	}
 	
-	@Test
-	public void toFindTheCheapestHotelForGivenDate() {
-		HotelReservation cheapHotel = new HotelReservation();
-		cheapHotel.getCheapHotelForGivenDate();
-	}
 }
